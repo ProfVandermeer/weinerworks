@@ -7213,6 +7213,17 @@ body {
 section {
   padding-bottom: 4em; }
 
+.jumbotron {
+  background: #D8BE07; }
+
+.btn-primary {
+  background: #8D271B;
+  border: none; }
+
+.btn-primary:hover {
+  background: #EDE5CC;
+  color: #8D271B; }
+
 .bg-light {
   background-color: #8D271B !important; }
 

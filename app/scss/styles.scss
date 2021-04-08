@@ -54,6 +54,19 @@ section {
   padding-bottom: 4em;
 }
 
+//Jumbotron Styles
+.jumbotron {
+  background: $ww_mustard;
+}
+.btn-primary {
+  background: $ww_ketchup;
+  border: none;
+}
+.btn-primary:hover {
+  background: $ww_mayo;
+  color: $ww_ketchup;
+}
+
 // ******************************** Navigation Styles
 
 .bg-light {

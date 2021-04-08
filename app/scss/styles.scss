@@ -1,0 +1,112 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+// ^^includes the Sass files from the nodes_modules folder. Default variables can be overwritten below
+@import'variables';
+
+/* ******************************************Color Palette
+ketchup red: #A90409;
+mayo beige: #EDE5CC;
+relish green: #648813;
+mustard yellow: #D8BE07;
+honey mustard: #EBD489;
+
+*************************************************** */
+//1. Sass/SCSS Variables
+$ww_ketchup: #8D271B;
+$ww_mayo: #EDE5CC;
+$ww_relish: #648813;
+$ww_mustard: #D8BE07;
+$ww_honeymustard: #EBD489;
+
+
+// ***********************************************Custom CSS
+// ****************************mixin examples
+// Example 2 with optional parameter (color)
+  @mixin colorCenter ($color) {
+    text-align: center;
+    color: $color;
+  }
+
+  footer p {
+    @include colorCenter($ww_mayo);
+  }
+
+  footer h6 {
+    @include colorCenter($ww_ketchup);
+  }
+
+@mixin transform($property){
+
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.nav-item a:hover {
+  @include transform(rotate(10deg));
+  }
+
+
+// *****************************General Styles
+body {
+  background: $ww_mayo;
+}
+
+section {
+  padding-bottom: 4em;
+}
+
+// ******************************** Navigation Styles
+
+.bg-light {
+  background-color: $ww_ketchup !important;
+}
+
+ul.navbar-nav li a {
+  color: $ww_mayo !important;
+}
+
+.nav-item.active a {
+  color: $ww_mustard !important;
+}
+
+.navbar-light .navbar-toggler {
+  background: $ww_honeymustard;
+}
+// ********************************main styles
+main {
+background: $ww_honeymustard;
+}
+
+// ****************************Popover Section
+// 2. Sass/SCSS Nesting Example
+
+section.row.popover-examps {
+  background: $ww_ketchup;
+  padding-top: 1em;
+  padding-bottom: 0;
+
+h4 {
+    color: $ww_mayo;
+  }
+
+  .btn-secondary {
+    background-color: $ww_mustard;
+    border: none;
+    &:focus {
+      background-color: $ww_ketchup;
+      border: $ww_ketchup;
+    }
+  }
+}
+
+footer {
+  background: $ww_relish;
+  color: white;
+}
+
+// **********************************************Media Queries
+
+@media (min-width: 1500px) {
+.container {
+  max-width: 1350px;
+}
+}
